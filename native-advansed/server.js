@@ -36,10 +36,10 @@ const router = client => {
     if (!route) {
         for (let i = 0; i < matching.length; i++) {
             const rs = matching[i];
-            par = client.req.url.match(rx[0]);
+            par = client.req.url.match(rs[0]);
             if (par) {
                 par.shift();
-                route = rx[1];
+                route = rs[1];
                 break;
             }
         }
